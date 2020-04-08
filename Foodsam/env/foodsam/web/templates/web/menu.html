@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Make your Menu List</h3>
+    <form action="" method="POST">
+        {% csrf_token %}
+            <label for="img">Select image:</label>
+            <input type="file" id="img" name="img" accept="image/*">
+
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+            <label for="name">Price</label>
+            <input type="number" id="price" name="price">
+
+            <button type="submit" onclick="menulist()">ADD ITEMS</button>
+            
+    </form>
+     <a href="image122.jpg" download>
+         <button type="button">download</button>
+     </a>
+    <br><br>
+        <h3>your Menu List:-</h3>
+
+     <div class="container">
+         <img id="disimg" src="" style="width: 100px; height:100px;">
+         <p id="disname"></p>
+         <p id="disprice"></p>
+     </div>
+     
+     <script>
+         var name = document.getElementById("name").value;
+         var price = document.getElementById("price").value;
+     function menulist(){
+         
+
+
+         document.getElementById("disname").innerHTML = name;
+         document.getElementById("disprice").innerHTML = price; 
+         
+     }
+     </script>
+
+</body>
+</html>

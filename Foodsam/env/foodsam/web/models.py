@@ -4,5 +4,19 @@ from django.db import models
 class CustomerRegistration(models.Model):
     username = models.CharField(max_length=20)
     email = models.EmailField(max_length=50)
-    password1 = models.CharField(max_length=20)
-    password2 = models.CharField(max_length=20)
+    password = models.CharField(max_length=20)
+    
+
+class ChefRegistration(models.Model):
+    username = models.CharField(max_length=20)
+    email = models.EmailField(max_length=50)
+    password = models.CharField(max_length=20)
+        
+
+
+class RestaurantRegistration(models.Model):
+    username = models.CharField(max_length=20)
+    email = models.EmailField(max_length=50)
+    password = models.CharField(max_length=20)
+    
+    
